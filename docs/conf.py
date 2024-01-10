@@ -71,3 +71,8 @@ add_module_names = False
 # todo
 todo_include_todos = True
 todo_link_only = True
+
+# myst
+myst_enable_extensions = [
+    "tasklist",
+]
