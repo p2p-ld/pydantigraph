@@ -14,7 +14,7 @@ class Namespace(BaseNode):
 
         Simple usage:
 
-        >>> ns = Namespace(uri='https://example.org')
+        >>> ns = Namespace(iri='https://example.org')
         >>> ns.property
         NamedNode('https://example.org/property')
 
@@ -32,7 +32,7 @@ class Namespace(BaseNode):
         subclassed, and since it's a Rust package with python bindings and probably shouldn't
         try and bypass that, we can't make this recursive -- ``Namespace.property.property2`` doesn't work
     """
-    uri: str
+    iri: str
     prefix: Optional[str] = None
 
     @computed_field
@@ -49,20 +49,20 @@ class Namespace(BaseNode):
         NamedNode can't be subclassed since it's typed as ``final`` ,
         so this is our workaround
         """
-        return NamedNode(self.uri)
+        return NamedNode(self.iri)
 
     def __getattr__(self, item:str) -> NamedNode:
-        uri = urllib.parse.urljoin(self.uri, item)
+        uri = urllib.parse.urljoin(self.iri, item)
         node = NamedNode(uri)
-        node._namespace = self.uri
+        # node._namespace = self.iri
         return node
 
     def __getitem__(self, item:str) -> NamedNode:
         if item.startswith('/'):
             item = item.lstrip('/')
-        uri = urllib.parse.urljoin(self.uri, item)
+        uri = urllib.parse.urljoin(self.iri, item)
         node = NamedNode(uri)
-        node._namespace = self.uri
+        # node._namespace = self.iri
         return node
 
 

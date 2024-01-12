@@ -13,9 +13,9 @@ def test_namespace_terms():
     target3 = NamedNode('https://example.com/node')
     target4 = NamedNode('https://example.com/subpath/subProperty')
 
-    ns1 = Namespace(uri='https://example.com')
-    ns2 = Namespace(uri='https://example.com/')
-    ns3 = Namespace(uri='https://example.com/subpath')
+    ns1 = Namespace(iri='https://example.com')
+    ns2 = Namespace(iri='https://example.com/')
+    ns3 = Namespace(iri='https://example.com/subpath')
 
     assert ns1.myProperty == target1
     assert ns1['my-Non-Python-Property'] == target2

@@ -1,0 +1,5 @@
+<tmp:#Me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<tmp:#Me> <http://xmlns.com/foaf/0.1/knows> <tmp:#Friend> .
+<tmp:#Me> <http://xmlns.com/foaf/0.1/name> "my friend" .
+<tmp:#Friend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<tmp:#Friend> <http://xmlns.com/foaf/0.1/name> "my friend!" .
