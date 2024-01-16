@@ -2,7 +2,7 @@ import pytest
 
 from pydantic import BaseModel
 from pyoxigraph import NamedNode
-from pyoxigraph_pydantic import Property, RDFModel
+from pydantigraph import Property, RDFModel
 
 def test_property_parameterization():
     with pytest.raises(ValueError):

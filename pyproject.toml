@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "pyoxigraph-pydantic"
+name = "pydantigraph"
 version = "0.1.0"
-description = "ORM data models, schemas, and vocabularies for pyoxigraph"
+description = "Graph models for pydantic with pyoxigraph"
 authors = ["sneakers-the-rat <sneakers-the-rat@protonmail.com>"]
 license = "GPL-3.0"
 readme = "README.md"
-repository = "https://github.com/p2p-ld/pyoxigraph-pydantic"
+repository = "https://github.com/p2p-ld/pydantigraph"
 
 [tool.poetry.dependencies]
 python = "^3.11"

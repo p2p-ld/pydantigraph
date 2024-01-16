@@ -1,6 +1,6 @@
 import pytest
 
-from pyoxigraph_pydantic import Namespace
+from pydantigraph import Namespace
 from pyoxigraph import NamedNode
 
 def test_namespace_terms():

@@ -7,7 +7,7 @@ ie we want
 
     from typing import ClassVar
     from pyoxigraph import NamedNode
-    from pyoxigraph_pydantic import RDFModel, Namespace
+    from pydantigraph import RDFModel, Namespace
     FOAF = Namespace(iri='http://xmlns.com/foaf/0.1/', prefix='foaf')
 
     class MyModel(RDFModel):
@@ -42,13 +42,13 @@ import pdb
 from abc import ABCMeta
 from typing import Type, Any, Dict, Tuple, Callable, TypeVar, cast, Generic, TYPE_CHECKING, get_args
 if TYPE_CHECKING:
-    from pyoxigraph_pydantic import RDFModel
+    from pydantigraph import RDFModel
 from types import GenericAlias
 
 from pydantic_core import core_schema
 from pydantic import GetCoreSchemaHandler
 from pyoxigraph import NamedNode
-from pyoxigraph_pydantic.types import Node
+from pydantigraph.types import Node
 
 PropertyType = TypeVar('PropertyType', Type, GenericAlias, Node)
 PropertyArgs = Tuple[PropertyType, NamedNode]
@@ -126,7 +126,7 @@ class PropertyMeta(ABCMeta):
                 return node
 
         def iri_from_property(arg: Any) -> Any:
-            from pyoxigraph_pydantic import RDFModel
+            from pydantigraph import RDFModel
             if isinstance(arg, RDFModel):
                 return arg.iri
             return arg

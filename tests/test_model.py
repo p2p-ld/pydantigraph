@@ -2,7 +2,7 @@ import pytest
 
 from typing import Optional
 from pyoxigraph import NamedNode, Store
-from pyoxigraph_pydantic import RDFModel, Namespace, Property
+from pydantigraph import RDFModel, Namespace, Property
 
 def test_base_model_write():
     FOAF = Namespace(iri='http://xmlns.com/foaf/0.1/')

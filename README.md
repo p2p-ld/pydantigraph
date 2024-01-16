@@ -1,4 +1,4 @@
-# pyoxigraph-pydantic
+# pydantigraph
 ORM data models, schemas, and vocabularies for pyoxigraph
 
 - [ ] ORM-like read/write with pyoxigraph

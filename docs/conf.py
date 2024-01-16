@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'pyoxigraph-pydantic'
+project = 'pydantigraph'
 copyright = '2024, Jonny Saunders <sneakers-the-rat@protonmail.com>'
 author = 'Jonny Saunders <sneakers-the-rat@protonmail.com>'
 release = 'v0.1.0'

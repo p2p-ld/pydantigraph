@@ -2,10 +2,10 @@ import pdb
 import inspect
 from typing import Optional, ClassVar, Any, TYPE_CHECKING, get_args, Type
 if TYPE_CHECKING:
-    from pyoxigraph_pydantic import Property
+    from pydantigraph import Property
 from pydantic import BaseModel
 from pyoxigraph import NamedNode, Store, Quad, Literal, DefaultGraph
-from pyoxigraph_pydantic.const import IS_A
+from pydantigraph.const import IS_A
 
 class RDFModel(BaseModel):
     iri: Optional[str] = None
@@ -55,7 +55,7 @@ def get_property(annotation: Any) -> Type['Property']:
     """
     Get a property from a potentially nested annotation
     """
-    from pyoxigraph_pydantic import Property
+    from pydantigraph import Property
     if inspect.isclass(annotation) and issubclass(annotation, Property):
         return annotation
     if get_args(annotation):

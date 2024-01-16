@@ -2,7 +2,7 @@ import urllib.parse
 from typing import Optional
 
 from pyoxigraph import NamedNode
-from pyoxigraph_pydantic.base import BaseNode
+from pydantigraph.base import BaseNode
 from pydantic import computed_field
 
 class Namespace(BaseNode):

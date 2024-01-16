@@ -1,4 +1,4 @@
-# pyoxigraph-pydantic
+# pydantigraph
 
 ORM models for working with RDF models in pyoxigraph with pydantic
 
